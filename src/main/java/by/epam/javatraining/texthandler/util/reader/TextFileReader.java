@@ -1,4 +1,4 @@
-package by.epam.javatraining.texthandler.util;
+package by.epam.javatraining.texthandler.util.reader;
 
 import org.apache.log4j.Logger;
 import java.io.*;
