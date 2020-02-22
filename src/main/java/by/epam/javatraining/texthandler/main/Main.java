@@ -1,4 +1,4 @@
-package by.epam.training.texthandler.main;
+package by.epam.javatraining.texthandler.main;
 
 import by.epam.javatraining.texthandler.util.reader.TextFileReader;
 import java.util.regex.Matcher;
