@@ -7,6 +7,11 @@ import java.util.List;
 public class TextComposite implements TextComponent {
     private List<TextComponent> componentList = new ArrayList<>();
 
+
+    public TextComposite() {
+
+    }
+
     @Override
     public void addComponent(TextComponent component) {
         componentList.add(component);
