@@ -5,11 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 
 public class TextComposite implements TextComponent {
-    private List<TextComponent> componentList = new ArrayList<>();
+    private List<TextComponent> componentList;
+    private TextComponentType textComponentType;
 
 
-    public TextComposite() {
-
+    public TextComposite(TextComponentType type) {
+        componentList = new ArrayList<>();
+        textComponentType = type;
     }
 
     @Override
@@ -25,6 +27,11 @@ public class TextComposite implements TextComponent {
     @Override
     public TextComponent getChild(int i) {
         return componentList.get(i);
+    }
+
+    @Override
+    public TextComponentType getTextComponentType() {
+        return textComponentType;
     }
 
     @Override

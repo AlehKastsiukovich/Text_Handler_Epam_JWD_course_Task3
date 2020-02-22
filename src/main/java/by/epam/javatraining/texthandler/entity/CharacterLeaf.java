@@ -4,9 +4,11 @@ import java.util.Iterator;
 
 public class CharacterLeaf implements TextComponent{
     private char leafCharacter;
+    private TextComponentType textComponentType;
 
     public CharacterLeaf(char leafCharacter) {
         this.leafCharacter = leafCharacter;
+        textComponentType = TextComponentType.SYMBOL;
     }
 
     @Override
@@ -22,6 +24,11 @@ public class CharacterLeaf implements TextComponent{
     @Override
     public TextComponent getChild(int i) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public TextComponentType getTextComponentType() {
+        return textComponentType;
     }
 
     @Override

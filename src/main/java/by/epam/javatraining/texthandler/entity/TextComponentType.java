@@ -1,6 +1,6 @@
 package by.epam.javatraining.texthandler.entity;
 
-public enum TextType {
+public enum TextComponentType {
     TEXT(".+"),
     PARAGRAPH("(?s)((?:[^\n][\n]?)+))"),
     SENTENCE("([A-Z][^\\.!?]*[\\.!?])"),
@@ -10,7 +10,7 @@ public enum TextType {
 
     String componentRegex;
 
-    TextType(String componentRegex) {
+    TextComponentType(String componentRegex) {
         this.componentRegex = componentRegex;
     }
 

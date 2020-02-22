@@ -1,10 +1,7 @@
 package by.epam.training.texthandler.main;
 
-import by.epam.javatraining.texthandler.entity.TextComposite;
-import by.epam.javatraining.texthandler.entity.TextType;
 import by.epam.javatraining.texthandler.util.reader.TextFileReader;
 
-import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -76,6 +73,6 @@ public class Main {
 //            System.out.println("Найдено значение: " + m.group(2));
         }
 
-        TextType textType = new TextType();
+
     }
 }
