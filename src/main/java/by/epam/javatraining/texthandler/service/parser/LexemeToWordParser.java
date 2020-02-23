@@ -2,6 +2,10 @@ package by.epam.javatraining.texthandler.service.parser;
 
 import by.epam.javatraining.texthandler.entity.TextComponent;
 import by.epam.javatraining.texthandler.entity.TextComponentType;
+import by.epam.javatraining.texthandler.entity.TextComposite;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LexemeToWordParser implements ChainTextParser {
     private ChainTextParser nextParser;
@@ -14,11 +18,18 @@ public class LexemeToWordParser implements ChainTextParser {
     @Override
     public TextComponent parse(TextComponent textComponent, String text) {
         if (textComponent.getTextComponentType() == TextComponentType.LEXEME) {
-            //parse
+            TextComponent word = new TextComposite(TextComponentType.WORD);
+
+            Pattern pattern = Pattern.compile(word.getTextComponentType().getComponentRegex());
+            Matcher matcher = pattern.matcher(text);
+
+            while(matcher.find()) {
+                textComponent.addComponent(nextParser.parse(word, matcher.group()));
+            }
         } else {
-            nextParser.parse(textComponent);
+            nextParser.parse(textComponent, text);
         }
 
-        return null;
+        return textComponent;
     }
 }
