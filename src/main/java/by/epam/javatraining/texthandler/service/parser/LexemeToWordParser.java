@@ -12,7 +12,7 @@ public class LexemeToWordParser implements ChainTextParser {
     }
 
     @Override
-    public TextComponent parse(TextComponent textComponent) {
+    public TextComponent parse(TextComponent textComponent, String text) {
         if (textComponent.getTextComponentType() == TextComponentType.LEXEME) {
             //parse
         } else {
