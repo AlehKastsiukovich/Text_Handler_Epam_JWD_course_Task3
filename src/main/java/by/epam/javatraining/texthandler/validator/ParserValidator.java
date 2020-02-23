@@ -17,11 +17,11 @@ public class ParserValidator {
     }
 
     public void checkParseMethodParameters(TextComponent textComponent, String text) throws ServiceException {
-        if (textComponent != null && textComponent.getTextComponentType() != null) {
+        if (textComponent == null || textComponent.getTextComponentType() == null) {
             throw new ServiceException();
         }
 
-        if (text != null && text.length() != 0) {
+        if (text == null || text.length() == 0) {
             throw new ServiceException();
         }
     }
