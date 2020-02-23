@@ -3,7 +3,6 @@ package by.epam.javatraining.texthandler.service.parser;
 import by.epam.javatraining.texthandler.entity.CharacterLeaf;
 import by.epam.javatraining.texthandler.entity.TextComponent;
 import by.epam.javatraining.texthandler.entity.TextComponentType;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

@@ -2,9 +2,9 @@ package by.epam.javatraining.texthandler.entity;
 
 public enum TextComponentType {
     TEXT(".+"),
-    PARAGRAPH("(?s)((?:[^\n][\n]?)+))"),
+    PARAGRAPH("\\s{4}.+"),
     SENTENCE("([A-Z][^\\.!?]*[\\.!?])"),
-    LEXEME("([^\\s]+)"),
+    LEXEME("(\\s{0,4}?).+(\\s|\\.|,)?"),
     WORD("(\\w+)(\\W*)"),
     SYMBOL(".");
 

@@ -35,4 +35,8 @@ public class CharacterLeaf implements TextComponent{
     public Iterator<TextComponent> getIterator() {
         throw new UnsupportedOperationException();
     }
+
+    public String toString() {
+        return String.valueOf(leafCharacter);
+    }
 }
