@@ -38,4 +38,15 @@ public class TextComposite implements TextComponent {
     public Iterator<TextComponent> getIterator() {
         return componentList.iterator();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (TextComponent textComponent : componentList) {
+            stringBuilder.append(textComponent.toString());
+        }
+
+        return stringBuilder.toString();
+    }
 }
