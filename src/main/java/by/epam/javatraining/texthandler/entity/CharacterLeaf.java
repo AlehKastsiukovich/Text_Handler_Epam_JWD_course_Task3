@@ -1,6 +1,7 @@
 package by.epam.javatraining.texthandler.entity;
 
 import java.util.Iterator;
+import java.util.List;
 
 public class CharacterLeaf implements TextComponent{
     private char leafCharacter;
@@ -33,6 +34,16 @@ public class CharacterLeaf implements TextComponent{
 
     @Override
     public Iterator<TextComponent> getIterator() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public List<TextComponent> getComponentList() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public int getComponentListSize() {
         throw new UnsupportedOperationException();
     }
 

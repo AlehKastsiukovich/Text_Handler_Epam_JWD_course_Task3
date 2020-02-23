@@ -40,6 +40,16 @@ public class TextComposite implements TextComponent {
     }
 
     @Override
+    public List<TextComponent> getComponentList() {
+        return componentList;
+    }
+
+    @Override
+    public int getComponentListSize() {
+        return componentList.size();
+    }
+
+    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
