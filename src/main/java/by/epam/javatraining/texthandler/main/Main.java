@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         String text = TextFileReader.getInstance().readFile();
         System.out.println(text);
-        
+
         TextComponent textComponent = new TextComposite(TextComponentType.TEXT);
         ChainTextParser chainTextParser = new TextToParagraphParser();
         ChainTextParser chainParagraphParser = new ParagraphToSentenceParser();
